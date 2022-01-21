@@ -53,7 +53,7 @@
         </div>
 <!--        <app-footer></app-footer>-->
 <!--        <div class="full-page-background" style="background-image: url(/static/img/background/background-3.jpg) "></div>-->
-        <div class="full-page-background" style="width: 1000px; height: 1000px;"></div>
+        <div class="full-page-background"></div>
       </div>
     </div>
   </div>
