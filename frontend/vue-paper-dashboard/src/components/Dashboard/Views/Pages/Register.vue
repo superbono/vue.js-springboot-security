@@ -1,73 +1,68 @@
 <template>
   <div class="register-page">
     <app-navbar></app-navbar>
-    <div class="wrapper wrapper-full-page ">
-      <div class="full-page register-page section-image" filter-color="black">
+    <div class="wrapper wrapper-full-page">
+      <div class="full-page register-page section-image" filter-color="black" style="margin-bottom: 15px;">
         <div class="content">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 col-md-5 ml-auto">
-                <info-section class="mt-5"
-                              type="primary"
-                              title="Marketing"
-                              description="We've created the marketing campaign of the website. It was a very interesting collaboration."
-                              icon="nc-icon nc-tv-2">
+          <div class="container" style="margin-top: -28px;">
+            <div class="row" style="margin-bottom: 58px; margin-left: -6px;">
+<!--              <div class="col-lg-5 col-md-5 ml-auto">-->
+<!--                <info-section class="mt-5"-->
+<!--                              type="primary"-->
+<!--                              title="Marketing"-->
+<!--                              description="We've created the marketing campaign of the website. It was a very interesting collaboration."-->
+<!--                              icon="nc-icon nc-tv-2">-->
 
-                </info-section>
-                <info-section type="primary"
-                              title="Fully Coded in HTML5"
-                              description="We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub."
-                              icon="nc-icon nc-html5">
+<!--                </info-section>-->
+<!--                <info-section type="primary"-->
+<!--                              title="Fully Coded in HTML5"-->
+<!--                              description="We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub."-->
+<!--                              icon="nc-icon nc-html5">-->
 
-                </info-section>
+<!--                </info-section>-->
 
-                <info-section type="primary"
-                              title="Built Audience"
-                              description="There is also a Fully Customizable CMS Admin Dashboard for this product."
-                              icon="nc-icon nc-atom">
+<!--                <info-section type="primary"-->
+<!--                              title="Built Audience"-->
+<!--                              description="There is also a Fully Customizable CMS Admin Dashboard for this product."-->
+<!--                              icon="nc-icon nc-atom">-->
 
-                </info-section>
-              </div>
-              <div class="col-lg-4 col-md-6 mr-auto">
-                <form @submit.prevent="register">
-                <card type="signup">
-                  <template slot="header">
-                    <h4 class="card-title text-center">Register</h4>
-                    <div class="social text-center">
-                      <button class="btn btn-icon btn-round btn-twitter">
-                        <i class="fa fa-twitter"></i>
-                      </button>
-                      <button class="btn btn-icon btn-round btn-dribbble">
-                        <i class="fa fa-dribbble"></i>
-                      </button>
-                      <button class="btn btn-icon btn-round btn-facebook">
-                        <i class="fa fa-facebook-f"></i>
-                      </button>
-                      <p class="card-description"> or be classical </p>
+<!--                </info-section>-->
+<!--              </div>-->
+              <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                <p style="color: #fff">아이디: test@test.com / 비밀번호: 1234</p>
+                <form @submit.prevent="login">
+<!--                  <card type="login" style="width: 380px; height: 529px; background: #2f2f37">-->
+                  <card type="regist" style="width: 380px; height: 529px; background: #2f2f37">
+                    <!--                  <h3 slot="header" class="header text-center">Login</h3>-->
+                    <div style="margin-bottom: -160px; width: 200px; height: 50px; text-align: center; margin-top: 80px;">
+                      <img :src="require(`@/assets/img/pincar_logo.png`)" style="margin-left: 70px;">
+                      <p class="subtitle" style="color: #fff; margin-left: 130px; margin-top: -10px">영업 ERP</p>
                     </div>
-                  </template>
-
-                  <fg-input v-model="name" class="mb-2" addon-left-icon="nc-icon nc-single-02" placeholder="Name"/>
-                  <validation-error :errors="apiValidationErrors.name"/>
-                  <fg-input v-model="email" class="mb-2 mt-1" addon-left-icon="nc-icon nc-email-85" placeholder="Email"/>
-                  <validation-error :errors="apiValidationErrors.email"/>
-                  <fg-input v-model="password" class="mb-2 mt-1" addon-left-icon="nc-icon nc-key-25" placeholder="Password" type="password"/>
-                  <validation-error :errors="apiValidationErrors.password"/>
-                  <fg-input v-model="password_confirmation" class="mb-2 mt-1" addon-left-icon="nc-icon nc-key-25" placeholder="Password confirmation" type="password"/>
-                  <validation-error :errors="apiValidationErrors.password_confirmation"/>
-                  <p-checkbox class="text-left" v-model="boolean">
-                    I agree to the
-                    <a href="#something">terms and conditions</a>.
-                  </p-checkbox>
-
-                  <p-button native-type="submit" slot="footer" type="info" round>Get Started</p-button>
-                </card>
+                    <!--                  border-radius: 3px;-->
+                    <!--                  border: solid 1px #505050;-->
+                    <!--                  background-color: #2f2f37;-->
+                    <fg-input v-model="email" placeholder="아이디" style="margin-top: 240px; padding: 0 30px; background-color: #2f2f37; "/>
+                    <validation-error :errors="apiValidationErrors.email" />
+                    <fg-input v-model="password" placeholder="비밀번호" type="password" style="padding: 0 30px;"/>
+                    <validation-error :errors="apiValidationErrors.password" />
+                    <div slot="footer" style="margin-top: -187px;padding: 0 25px;">
+                      <p-button native-type="submit" slot="footer" type="warning" round block class="mb-3">회원가입</p-button>
+                      <div class="pull-left" style="margin-top: 5px;">
+                        <!--                      <h6><a href="/password/reset" class="link footer-link">Forgot Password?</a></h6>-->
+                        <!--                        <h6 style="color: #fff">아이디저장</h6>-->
+                        <input type="checkbox" style="margin-left: 2px;"><span style="color: #fff; font-size: 11px; margin-left: 7px; vertical-align: 2px;">아이디 저장</span>
+                        <span style="color: #fff; font-size: 12px; margin-left: 27px; vertical-align: 2px; color: #a0a0a0"><a href="#" style="color: #a0a0a0; text-decoration: none;">아이디,비밀번호 찾기</a></span>
+                        <span style="color: #fff; font-size: 12px; margin-left: 5px; vertical-align: 2px; color: #a0a0a0"> | </span>
+                        <span style="color: #fff; font-size: 12px; margin-left: 5px; vertical-align: 2px;"><a href="/login" style="color: #a0a0a0; text-decoration: none;">로그인</a></span>
+                      </div>
+                    </div>
+                  </card>
                 </form>
               </div>
             </div>
           </div>
         </div>
-        <app-footer></app-footer>
+<!--        <app-footer></app-footer>-->
         <div class="full-page-background"
              style="background-image: url(/static/img/background/jan-sendereks.jpg) "></div>
       </div>
