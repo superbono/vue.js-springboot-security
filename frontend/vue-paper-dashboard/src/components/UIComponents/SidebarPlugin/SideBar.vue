@@ -25,8 +25,9 @@
           style="font-size: 30px; font-weight: bold"
       >
 <!--        {{ title }}-->
-        <div>
-          <img :src="require(`@/assets/img/pincar_logo.png`)">
+        <div style="width: 150px;height: 80px">
+<!--          <img :src="require(`@/assets/img/pincar_logo.png`)">-->
+          <img :src="require(`@/assets/img/logo_white.png`)" style="margin-left: -25px; opacity: .6; margin-top: -40px;">
         </div>
       </a>
     </div>

@@ -19,19 +19,19 @@
 <!--                    </div>-->
                   </div>
             </div>
-            <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-              <p style="color: #fff">아이디: test@test.com / 비밀번호: 1234</p>
+            <div class="col-lg-4 col-md-6 ml-auto mr-auto"  style="margin-top: -47px">
+<!--              <p style="color: #fff">아이디: test@test.com / 비밀번호: 1234</p>-->
               <form @submit.prevent="login">
-                <card type="login" style="width: 380px; height: 529px; background: #2f2f37">
+                <card type="login" style="width: 380px; height: 529px; background: #2f2f37; opacity: 0.75">
 <!--                  <h3 slot="header" class="header text-center">Login</h3>-->
                     <div style="margin-bottom: -160px; width: 200px; height: 50px; text-align: center; margin-top: 80px;">
-                      <img :src="require(`@/assets/img/pincar_logo.png`)" style="margin-left: 70px;">
-                      <p class="subtitle" style="color: #fff; margin-left: 130px; margin-top: -10px">영업 ERP</p>
+                      <img :src="require(`@/assets/img/logo_white.png`)" style="margin-left: 70px; opacity: .8; margin-top: -20px">
+<!--                      <p class="subtitle" style="color: #fff; margin-left: 130px; margin-top: -10px">영업 ERP</p>-->
                     </div>
 <!--                  border-radius: 3px;-->
 <!--                  border: solid 1px #505050;-->
 <!--                  background-color: #2f2f37;-->
-                  <fg-input v-model="email" placeholder="아이디" style="margin-top: 240px; padding: 0 30px; background-color: #2f2f37; "/>
+                  <fg-input v-model="email" placeholder="아이디" style="margin-top: 240px; padding: 0 30px;"/>
                   <validation-error :errors="apiValidationErrors.email" />
                   <fg-input v-model="password" placeholder="비밀번호" type="password" style="padding: 0 30px;"/>
                   <validation-error :errors="apiValidationErrors.password" />
@@ -53,7 +53,8 @@
         </div>
 <!--        <app-footer></app-footer>-->
 <!--        <div class="full-page-background" style="background-image: url(/static/img/background/background-3.jpg) "></div>-->
-        <div class="full-page-background"></div>
+<!--        <div class="full-page-background"></div>-->
+          <div class="full-page-background" style="background-image: url('/static/img/background/bruno-abatti.jpg')"></div>
       </div>
     </div>
   </div>
@@ -151,5 +152,8 @@ export default {
   .subtitle {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: normal;
+  }
+  ::placeholder {
+    font-size: 11px;
   }
 </style>
